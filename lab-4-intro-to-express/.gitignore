@@ -1,0 +1,6 @@
+#ignore packages installed by npm
+node_modules
+
+#ignore system files
+# prevents any file with the suffix following *
+.DS_STORE, *.bak
