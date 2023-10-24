@@ -1,0 +1,90 @@
+<div class="section-divider" id="about"></div>
+<h1 class="primary-color-light bebasNeue">{{data.title}}</h1>
+<p>{{data.description}}</p>
+
+{{#if data.services}}
+<div class="section-divider" id="services"></div>
+<div class="accordion" id="servicesAccordion">
+  {{#each data.services}}
+  <div class="accordion-item">
+    <h2 class="accordion-header bebasNeue">
+      <button class="accordion-button collapsed secondary-color-bg primary-color-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_{{@index}}" aria-expanded="true" aria-controls="collapse_{{@index}}">
+        {{this.title}}
+      </button>
+    </h2>
+    <div id="collapse_{{@index}}" class="accordion-collapse collapse {{this.show}}" data-bs-parent="#servicesAccordion">
+      <div class="accordion-body">
+        <div class="row">
+            <div class="col">
+                <p>{{this.intro}}</p>
+                <ul>
+                    {{#each this.lists}}
+                    <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="col">
+                <img class="img-fluid" src="{{this.image}}" alt="">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {{/each}} 
+</div>
+  {{/if}}
+
+{{#if data.packages}}
+<div class="section-divider" id="services"></div>
+<h2 id="packages">Tour Packages</h2>
+<div class="owl-theme owl-carousel owl-packages">
+    {{#each data.packages}}
+    <div class="card">
+        {{#if this.image}}
+        <img src="{{this.image}}" class="card-img-top" alt="...">
+        {{/if}}
+        <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <p class="card-text">{{this.text}}</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">${{this.price}}</li>
+            <li class="list-group-item">{{this.duration}}</li>
+        </ul>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+
+{{#if gallery.images}}
+<div class="section-divider" id="gallery"></div>
+<h2>Image Gallery</h2>
+<div class="row">
+  {{#each gallery.images}}
+    <div class="col-3">
+      <!-- Button trigger modal -->
+      <a href="#" class="gallery-img" data-bs-toggle="modal" data-bs-target="#gallery{{@index}}">
+        <img src="{{this.url}}" alt="{{this.title}}" class="img-thumbnail">
+      </a>
+      <!-- Modal -->
+      <div class="modal fade" id="gallery{{@index}}" tabindex="-1" aria-labelledby="gallery{{@index}}Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="gallery{{@index}}Label">{{this.title}}</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="{{this.url}}" alt="{{this.title}}" class="img-fluid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+{{/if}}
+
+<footer class="primary-color-bg secondary-color-light">
+  Copyright 2023 - Kali Ryder
+</footer>

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200;300;600&display=swap');
+
+.bebasNeue {font-family: 'Bebas Neue', sans-serif; font-weight: 400}
+
+.raleway-extra-light {font-family: 'Raleway', sans-serif; font-weight: 200}
+.raleway-light {font-family: 'Raleway', sans-serif; font-weight: 300}
+.raleway-bold {font-family: 'Raleway', sans-serif; font-weight: 600}
+
+body {
+    background-color: #CCCCCC;
+}
+
+.white-bg {
+    background-color: white;
+}

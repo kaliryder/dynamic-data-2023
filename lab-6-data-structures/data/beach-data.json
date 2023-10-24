@@ -1,0 +1,32 @@
+{
+    "title":"Miami Beach",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et perferendis ratione esse nobis sequi repellat quaerat velit illum nam! Consectetur earum enim sint tempora rem deleniti quae, autem omnis. Vero!",
+    "slideshow":[
+        "/img/slides/skyline.jpg",
+        "/img/slides/bayside.jpg",
+        "/img/slides/miamibeach.jpg"
+    ],
+    "services":[
+        {
+            "title":"Transportation",
+            "intro":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt magni maiores voluptatem, tempore voluptates.",
+            "lists":[
+                "Service 1",
+                "Service 2",
+                "Service 3"
+            ],
+            "image":"/img/homepage/transportation.jpg",
+            "show":"show"
+        },
+        {
+            "title":"Miami Tours",
+            "intro":"Adipisci numquam quasi impedit, fuga eligendi culpa aut reprehenderit cum quisquam inventore quis magni vitae?",
+            "lists":[
+                "Service 1",
+                "Service 2",
+                "Service 3"
+            ],
+            "image":"/img/homepage/tours.jpg"
+        }
+    ]
+}

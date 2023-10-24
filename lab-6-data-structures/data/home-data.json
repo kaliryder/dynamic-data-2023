@@ -1,0 +1,76 @@
+{
+    "title":"Welcome To Miami - From data source",
+    "description":"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et perferendis ratione esse nobis sequi repellat quaerat velit illum nam! Consectetur earum enim sint tempora rem deleniti quae, autem omnis. Vero!",
+    "slideshow":[
+        "/img/slides/skyline.jpg",
+        "/img/slides/bayside.jpg",
+        "/img/slides/tours.jpg"
+    ],
+    "services":[
+        {
+            "title":"Transportation",
+            "intro":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque sunt magni maiores voluptatem, tempore voluptates.",
+            "lists":[
+                "Service 1",
+                "Service 2",
+                "Service 3"
+            ],
+            "image":"/img/homepage/transportation.jpg",
+            "show":"show"
+        },
+        {
+            "title":"Miami Tours",
+            "intro":"Adipisci numquam quasi impedit, fuga eligendi culpa aut reprehenderit cum quisquam inventore quis magni vitae?",
+            "lists":[
+                "Service 1",
+                "Service 2",
+                "Service 3"
+            ],
+            "image":"/img/homepage/tours.jpg"
+        }
+    ],
+    "packages":[
+        {
+            "title":"Beach Day",
+            "image":"/img/homepage/beach.jpg",
+            "text":"Lorem",
+            "price":"1500",
+            "duration":"1 Day"
+        },
+        {
+            "title":"Zoo Weekend",
+            "image":"/img/homepage/zoo.jpg",
+            "text":"Lorem",
+            "price":"500",
+            "duration":"3 Days"
+        },
+        {
+            "title":"Islamorada Trip",
+            "image":"/img/homepage/islamorada.jpg",
+            "text":"Lorem",
+            "price":"3300",
+            "duration":"4 Days"
+        },
+        {
+            "title":"Paddle Boarding",
+            "image":"/img/homepage/paddleboarding.jpg",
+            "text":"Lorem",
+            "price":"100",
+            "duration":"1 Day"
+        },
+        {
+            "title":"SoBe Segway Tour",
+            "image":"/img/homepage/segway.jpg",
+            "text":"Lorem",
+            "price":"300",
+            "duration":"1 Day"
+        },
+        {
+            "title":"Kayak",
+            "image":"/img/homepage/kayak.jpg",
+            "text":"Lorem",
+            "price":"100",
+            "duration":"1 Day"
+        }
+    ]
+}

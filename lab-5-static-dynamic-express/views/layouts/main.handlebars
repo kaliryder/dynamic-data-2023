@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miami Travel {{#if title}}{{title}}{{/if}}</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="container-lg white-bg">
+    {{>navbar}}
+    <header>
+        {{!-- <img src="/img/logo.png" alt=""> --}}
+    </header>
+    {{{body}}}
+    <p>This is in the main layout</p>
+</div>
+
+<script src="/js/bootstrap.bundle.js"></script>
+</body>
+</html>
