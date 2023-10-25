@@ -1,0 +1,33 @@
+{
+    "title":"The Borough",
+    "description":"Fenwick is a borough in Middlesex County, Connecticut, United States, in the town of Old Saybrook. The population was 53 at the 2020 census, making it the least populous borough in Connecticut. Most of the borough is included in the Fenwick Historic District, listed on the National Register of Historic Places. In 1995, the district included 66 contributing buildings and one other contributing site.",
+    "slideshow":[
+        "/img/slides/skyline.jpg",
+        "/img/slides/bayside.jpg",
+        "/img/slides/miamibeach.jpg"
+    ],
+    "services":[
+        {
+            "title":"Car Rental",
+            "intro":"Rent a car to drive around Fenwick.",
+            "lists":[
+                "Town Car",
+                "Convertible",
+                "Sports Utility Vehicle",
+                "Recreational Vehicle"
+            ],
+            "image":"/img/homepage/transportation.jpg",
+            "show":"show"
+        },
+        {
+            "title":"House Rental",
+            "intro":"Adipisci numquam quasi impedit, fuga eligendi culpa aut reprehenderit cum quisquam inventore quis magni vitae?",
+            "lists":[
+                "Service 1",
+                "Service 2",
+                "Service 3"
+            ],
+            "image":"/img/homepage/tours.jpg"
+        }
+    ]
+}

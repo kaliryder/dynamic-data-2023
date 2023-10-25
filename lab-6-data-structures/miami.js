@@ -26,23 +26,23 @@ app.get('/',(req,res)=>{
     res.render('page',{ data, gallery })
 })
 
-app.get('/zoo',(req,res)=>{
-    var data = require('./data/zoo-data.json')
+app.get('/golf',(req,res)=>{
+    var data = require('./data/golf-data.json')
     res.render('page',{ data, gallery })
 })
 
-app.get('/hardrock',(req,res)=>{
-    var data = require('./data/hardrock-data.json')
+app.get('/tennis',(req,res)=>{
+    var data = require('./data/tennis-data.json')
     res.render('page',{ data, gallery })
 })
 
-app.get('/beach',(req,res)=>{
-    var data = require('./data/beach-data.json')
+app.get('/borough',(req,res)=>{
+    var data = require('./data/borough-data.json')
     res.render('page',{ data, gallery })
 })
 
-app.get('/southpoint',(req,res)=>{
-    var data = require('./data/southpoint-data.json')
+app.get('/pier',(req,res)=>{
+    var data = require('./data/pier-data.json')
     res.render('page',{ data, gallery })
 })
 
