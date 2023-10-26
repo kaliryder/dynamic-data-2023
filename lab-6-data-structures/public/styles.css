@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@200;300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500&family=Dawning+of+a+New+Day&family=Gwendolyn:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
-.bebasNeue {font-family: 'Bebas Neue', sans-serif; font-weight: 400}
+.nanumMyeongjo-light {font-family: 'Nanum Myeongjo', serif; font-weight: 400}
+.nanumMyeongjo-regular {font-family: 'Nanum Myeongjo', serif; font-weight: 700}
+.nanumMyeongjo-bold {font-family: 'Nanum Myeongjo', serif; font-weight: 800}
 
-.raleway-extra-light {font-family: 'Raleway', sans-serif; font-weight: 200}
-.raleway-light {font-family: 'Raleway', sans-serif; font-weight: 300}
-.raleway-bold {font-family: 'Raleway', sans-serif; font-weight: 600}
+.dawningOfANewDay {font-family: 'Dawning of a New Day', cursive}
+
+.gwendolyn-regular {font-family: 'Gwendolyn', cursive; font-weight: 400}
+.gwendolyn-bold {font-family: 'Gwendolyn', cursive; font-weight: 700}
+
+.archivoNarrow-regular {font-family: 'Archivo Narrow', sans-serif; font-weight: 400}
+.archivoNarrow-bold {font-family: 'Archivo Narrow', sans-serif; font-weight: 500}
 
 .white-bg {
     background-color: white;
@@ -47,8 +53,30 @@
     background-color: #9FE3FF;
 }
 
+.collapse a {
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.nav-content {
+    padding: 1rem;
+}
+
+.navbar-brand img {
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.d-flex {
+    padding: 2rem;
+    padding-left: 3rem;
+}
+
 p {
     padding: 2rem;
+    padding-bottom: 0rem;
 }
 
 h1 {
@@ -57,10 +85,11 @@ h1 {
 
 .section-header {
     padding: 2rem;
+    padding-top: 0rem;
 }
 
 .owl-dots {
-    padding-top: 2rem;
+    padding: 2rem;
 }
 
 .container-fluid {
@@ -89,6 +118,10 @@ h1 {
     object-fit: cover;
     height: 20rem;
     aspect-ratio: 1/1;
+}
+
+.card-text {
+    padding: 2rem;
 }
 
 .img-fluid {

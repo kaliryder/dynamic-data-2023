@@ -2,9 +2,9 @@
     "title":"Times Square",
     "description":"Times Square is the epicenter of entertainment and commercialism, known for its bright, flashing billboards and the famous New Year's Eve Ball Drop. It's a vibrant and bustling hub for theater, shopping, and dining, making it an iconic symbol of New York City.",
     "slideshow":[
-        "/img/slides/slide-1.jpg",
-        "/img/slides/slide-2.jpg",
-        "/img/slides/slide-3.jpg"
+        "/img/TS/TS-slide-1.jpg",
+        "/img/TS/TS-slide-2.jpg",
+        "/img/TS/TS-slide-3.jpg"
     ],
     "services":[
         {

@@ -2,9 +2,9 @@
     "title":"The Metropolitan Museum of Art",
     "description":"The Met is a treasure trove of art and history, housing an extensive collection of artifacts from around the world. From ancient Egyptian mummies to Renaissance masterpieces, it's a journey through time and culture that art lovers will cherish.",
     "slideshow":[
-        "/img/slides/slide-1.jpg",
-        "/img/slides/slide-2.jpg",
-        "/img/slides/slide-3.jpg"
+        "/img/MET/MET-slide-1.jpg",
+        "/img/MET/MET-slide-2.jpg",
+        "/img/MET/MET-slide-3.jpg"
     ],
     "services":[
         {

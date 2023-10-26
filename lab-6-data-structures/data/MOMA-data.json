@@ -2,9 +2,9 @@
     "title":"The Museum of Modern Art",
     "description":"MoMA is a world-renowned institution showcasing a stunning collection of modern and contemporary art. Visitors can admire works by artists like Picasso, Van Gogh, and Warhol. The museum is an inspiring hub for art aficionados and those looking to explore the creative spirit of Manhattan.",
     "slideshow":[
-        "/img/slides/slide-1.jpg",
-        "/img/slides/slide-2.jpg",
-        "/img/slides/slide-3.jpg"
+        "/img/MOMA/MOMA-slide-1.jpg",
+        "/img/MOMA/MOMA-slide-2.jpg",
+        "/img/MOMA/MOMA-slide-3.jpg"
     ],
     "services":[
         {

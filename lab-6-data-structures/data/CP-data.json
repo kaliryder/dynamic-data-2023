@@ -2,9 +2,9 @@
     "title":"Central Park",
     "description":"Central Park is a sprawling oasis in the heart of Manhattan, offering a peaceful escape from the bustling city. Visitors can explore its lush greenery, iconic landmarks like Bethesda Terrace and Bow Bridge, and enjoy activities such as boating, picnicking, and concerts. It's a perfect place for nature lovers and outdoor enthusiasts.",
     "slideshow":[
-        "/img/slides/slide-1.jpg",
-        "/img/slides/slide-2.jpg",
-        "/img/slides/slide-3.jpg"
+        "/img/CP/CP-slide-1.jpg",
+        "/img/CP/CP-slide-2.jpg",
+        "/img/CP/CP-slide-3.jpg"
     ],
     "services":[
         {
