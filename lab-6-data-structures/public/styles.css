@@ -47,7 +47,24 @@
     background-color: #9FE3FF;
 }
 
+p {
+    padding: 2rem;
+}
+
+h1 {
+    padding: 2rem;
+}
+
+.section-header {
+    padding: 2rem;
+}
+
+.owl-dots {
+    padding-top: 2rem;
+}
+
 .container-fluid {
+    padding: 1rem;
 }
 
 .accordion {
@@ -89,5 +106,5 @@
 }
 
 footer {
-    padding: 3rem;
+    padding: 2rem;
 }
