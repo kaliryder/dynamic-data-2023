@@ -1,0 +1,93 @@
+{
+    "title":"Times Square",
+    "description":"Times Square is the epicenter of entertainment and commercialism, known for its bright, flashing billboards and the famous New Year's Eve Ball Drop. It's a vibrant and bustling hub for theater, shopping, and dining, making it an iconic symbol of New York City.",
+    "slideshow":[
+        "/img/slides/slide-1.jpg",
+        "/img/slides/slide-2.jpg",
+        "/img/slides/slide-3.jpg"
+    ],
+    "services":[
+        {
+            "title":"Times Square Broadway Show Tickets",
+            "intro":"Secure tickets to a Broadway show in Times Square for an unforgettable night of world-class theater.",
+            "lists":[
+                "Comedy Show",
+                "Drama Show"
+            ],
+            "image":"/img/TS/TS-1.jpg",
+            "show":"show"
+        },
+        {
+            "title":"Times Square Guided Walking Tours",
+            "intro":"Discover the history and culture of Times Square with guided walking tours, led by knowledgeable local guides.",
+            "lists":[
+                "Daytime Tour",
+                "Nighttime Tour"
+            ],
+            "image":"/img/TS/TS-2.jpg"
+        },
+        {
+            "title":"Times Square Dining Reservations",
+            "intro":"Book reservations at popular Times Square restaurants to enjoy the diverse culinary offerings of the area.",
+            "lists":[
+                "Chinese Cuisine",
+                "Mexican Cuisine",
+                "American Cuisine"
+            ],
+            "image":"/img/TS/TS-3.jpg"
+        },
+        {
+            "title":"Times Square Shopping Concierge",
+            "intro":"Get assistance from a personal shopper to explore the vibrant shopping scene in Times Square.",
+            "lists":[
+                "Clothing Shopping",
+                "Souvenir Shopping"
+            ],
+            "image":"/img/TS/TS-4.jpg"
+        }
+    ],
+    "packages":[
+        {
+            "title":"Times Square Spectacular Package",
+            "image":"/img/TS/TS-5.jpg",
+            "text":"Experience the excitement of Times Square with a 2-day stay, Broadway show tickets, dinner reservations, and guided tours.",
+            "price":"1000",
+            "duration":"2 Days"
+        },
+        {
+            "title":"Times Square Romance Getaway",
+            "image":"/img/TS/TS-6.jpg",
+            "text":"Enjoy a romantic weekend in the heart of Times Square with a 2-night stay, dinner at a top restaurant, and a Broadway show.",
+            "price":"1500",
+            "duration":"2 Days"
+        },
+        {
+            "title":"Times Square Family Adventure",
+            "image":"/img/TS/TS-7.jpg",
+            "text":"Bring the family for a 3-day adventure featuring kid-friendly Broadway shows, a visit to the famous M&M's store, and accommodations near Times Square.",
+            "price":"3000",
+            "duration":"3 Days"
+        },
+        {
+            "title":"Times Square VIP Experience",
+            "image":"/img/TS/TS-8.jpg",
+            "text":"Elevate your visit with a 1-day package offering backstage Broadway access, a private theater tour, and a gourmet dinner in Times Square.",
+            "price":"2000",
+            "duration":"1 Day"
+        },
+        {
+            "title":"Times Square Shopper's Paradise",
+            "image":"/img/TS/TS-9.jpg",
+            "text":"Discover the best of Times Square shopping with a 2-day package including a personal shopper, exclusive discounts, and accommodations nearby.",
+            "price":"2500",
+            "duration":"2 Days"
+        },
+        {
+            "title":"Times Square Art and Culture Package",
+            "image":"/img/TS/TS-10.jpg",
+            "text":"Explore the cultural side of Times Square with a 2-day itinerary featuring art installations, street performances, and dining at artistic venues.",
+            "price":"1000",
+            "duration":"2 Days"
+        }
+    ]
+}

@@ -1,68 +1,68 @@
 {
     "images":[
         {
-            "url":"/img/gallery/file_1.jpg",
-            "title":"Title 1 about the image"
+            "url":"/img/gallery/NYC-1.jpg",
+            "title":"Black and white shot of Manhattan"
         },
         {
-            "url":"/img/gallery/file_2.jpg",
-            "title":"Title 2 about the image"
+            "url":"/img/gallery/NYC-2.jpg",
+            "title":"Two New Yorkers on the street"
         },
         {
-            "url":"/img/gallery/file_3.jpg",
-            "title":"Title 3 about the image"
+            "url":"/img/gallery/NYC-3.jpg",
+            "title":"Skyline on the water"
         },
         {
-            "url":"/img/gallery/file_4.jpg",
-            "title":"Title 4 about the image"
+            "url":"/img/gallery/NYC-4.jpg",
+            "title":"Two people behind Pikachu"
         },
         {
-            "url":"/img/gallery/file_5.jpg",
-            "title":"Title 5 about the image"
+            "url":"/img/gallery/NYC-5.jpg",
+            "title":"The bridge"
         },
         {
-            "url":"/img/gallery/file_6.jpg",
-            "title":"Title 6 about the image"
+            "url":"/img/gallery/NYC-6.jpg",
+            "title":"Skyscrapers"
         },
         {
-            "url":"/img/gallery/file_7.jpg",
-            "title":"Title 7 about the image"
+            "url":"/img/gallery/NYC-7.jpg",
+            "title":"Colorful street shot"
         },
         {
-            "url":"/img/gallery/file_8.jpg",
-            "title":"Title 8 about the image"
+            "url":"/img/gallery/NYC-8.jpg",
+            "title":"Manhattan sky"
         },
         {
-            "url":"/img/gallery/file_9.jpg",
-            "title":"Title 9 about the image"
+            "url":"/img/gallery/NYC-9.jpg",
+            "title":"An alleyway"
         },
         {
-            "url":"/img/gallery/file_10.jpg",
-            "title":"Title 10 about the image"
+            "url":"/img/gallery/NYC-10.jpg",
+            "title":"Saxophone player"
         },
         {
-            "url":"/img/gallery/file_11.jpg",
-            "title":"Title 11 about the image"
+            "url":"/img/gallery/NYC-11.jpg",
+            "title":"Motel signs"
         },
         {
-            "url":"/img/gallery/file_12.jpg",
-            "title":"Title 12 about the image"
+            "url":"/img/gallery/NYC-12.jpg",
+            "title":"Grand Central"
         },
         {
-            "url":"/img/gallery/file_13.jpg",
-            "title":"Title 13 about the image"
+            "url":"/img/gallery/NYC-13.jpg",
+            "title":"Nighttime in Manhattan"
         },
         {
-            "url":"/img/gallery/file_14.jpg",
-            "title":"Title 14 about the image"
+            "url":"/img/gallery/NYC-14.jpg",
+            "title":"The Met"
         },
         {
-            "url":"/img/gallery/file_15.jpg",
-            "title":"Title 15 about the image"
+            "url":"/img/gallery/NYC-15.jpg",
+            "title":"Skyscrapers at dawn"
         },
         {
-            "url":"/img/gallery/file_16.jpg",
-            "title":"Title 16 about the image"
+            "url":"/img/gallery/NYC-16.jpg",
+            "title":"Upward street view"
         }
     ]
 }

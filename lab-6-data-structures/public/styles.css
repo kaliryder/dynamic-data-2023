@@ -47,7 +47,12 @@
     background-color: #9FE3FF;
 }
 
-/* remove owl-nav arrows */
+.container-fluid {
+}
+
+.accordion {
+    padding: 1rem;
+}
 
 .owl-nav {
     display: none;
@@ -55,12 +60,31 @@
 
 .section-divider {
     padding: 1rem;
-    
 }
 
 .gallery-img img {
     object-fit: cover;
     height: 20rem;
+    aspect-ratio: 1/1;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 20rem;
+    aspect-ratio: 1/1;
+}
+
+.img-fluid {
+    object-fit: cover;
+    height: 15rem;
+    width: 30rem;
+    aspect-ratio: 1/1;
+    padding-left: 5rem;
+}
+
+.carousel-img-fluid {
+    object-fit: cover;
+    height: 30rem;
     aspect-ratio: 1/1;
 }
 

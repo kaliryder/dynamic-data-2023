@@ -1,0 +1,93 @@
+{
+    "title":"The Metropolitan Museum of Art",
+    "description":"The Met is a treasure trove of art and history, housing an extensive collection of artifacts from around the world. From ancient Egyptian mummies to Renaissance masterpieces, it's a journey through time and culture that art lovers will cherish.",
+    "slideshow":[
+        "/img/slides/slide-1.jpg",
+        "/img/slides/slide-2.jpg",
+        "/img/slides/slide-3.jpg"
+    ],
+    "services":[
+        {
+            "title":"The Met Audio Guides",
+            "intro":"Take advantage of audio guides at The Met for a self- guided tour, allowing you to delve into the rich history of the museum's collections.",
+            "lists":[
+                "Lower Level Guide",
+                "Upper Level Guide"
+            ],
+            "image":"/img/MET/MET-1.jpg",
+            "show":"show"
+        },
+        {
+            "title":"Museum Gift Shop Personal Shoppers",
+            "intro":"Receive personalized shopping assistance in The Met's gift shop, helping you find unique art-inspired items.",
+            "lists":[
+                "Clothing Shoppers",
+                "Souvenir Shoppers"
+            ],
+            "image":"/img/MET/MET-2.jpg"
+        },
+        {
+            "title":"The Met Art History Lectures",
+            "intro":"Attend informative lectures on art history topics, providing a deeper understanding of the museum's collections.",
+            "lists":[
+                "Renaissance Lecture",
+                "High Renaissance Lecture",
+                "Romanticism Lecture"
+            ],
+            "image":"/img/MET/MET-3.jpg"
+        },
+        {
+            "title":"The Met Museum Store",
+            "intro":"Explore a vast selection of art books, exhibition catalogs, and merchandise related to The Met.",
+            "lists":[
+                "Lower Level Store",
+                "Upper Level Store"
+            ],
+            "image":"/img/MET/MET-4.jpg"
+        }
+    ],
+    "packages":[
+        {
+            "title":"The Met Art Lover's Weekend",
+            "image":"/img/MET/MET-5.jpg",
+            "text":"Immerse yourself in art history with a 2-day stay, guided tours, and special access to The Met's collections.",
+            "price":"800",
+            "duration":"2 Days"
+        },
+        {
+            "title":"VIP Met Experience",
+            "image":"/img/MET/MET-6.jpg",
+            "text":"Enhance your visit with a 1-day VIP package, offering exclusive curator-led tours, behind-the-scenes access, and a private art history lecture.",
+            "price":"2000",
+            "duration":"1 Day"
+        },
+        {
+            "title":"The Met Family Discovery Package",
+            "image":"/img/MET/MET-7.jpg",
+            "text":"Bring the family for a 2-day visit, featuring interactive tours, art history lectures for kids, and accommodations near the museum.",
+            "price":"2500",
+            "duration":"2 Days"
+        },
+        {
+            "title":"Art and Dining at The Met",
+            "image":"/img/MET/MET-8.jpg",
+            "text":"Combine your love for art and food with a 2-day package including The Met admission and dining at artistic-themed restaurants in the city.",
+            "price":"1500",
+            "duration":"2 Days"
+        },
+        {
+            "title":"The Met Art Workshop Retreat",
+            "image":"/img/MET/MET-9.jpg",
+            "text":"Immerse yourself in art creation with a 4-day retreat, including hands-on art workshops, access to The Met's resources, and a showcase of your work.",
+            "price":"2000",
+            "duration":"4 Days"
+        },
+        {
+            "title":"The Met Cultural Exploration",
+            "image":"/img/MET/MET-10.jpg",
+            "text":"Dive into the rich cultural tapestry of The Met with a 3-day package including art history lectures, guided tours, and visits to cultural neighborhoods.",
+            "price":"1000",
+            "duration":"3 Days"
+        }
+    ]
+}

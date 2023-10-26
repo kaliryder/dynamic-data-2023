@@ -1,0 +1,93 @@
+{
+    "title":"Central Park",
+    "description":"Central Park is a sprawling oasis in the heart of Manhattan, offering a peaceful escape from the bustling city. Visitors can explore its lush greenery, iconic landmarks like Bethesda Terrace and Bow Bridge, and enjoy activities such as boating, picnicking, and concerts. It's a perfect place for nature lovers and outdoor enthusiasts.",
+    "slideshow":[
+        "/img/slides/slide-1.jpg",
+        "/img/slides/slide-2.jpg",
+        "/img/slides/slide-3.jpg"
+    ],
+    "services":[
+        {
+            "title":"Bike Rentals",
+            "intro":"Rent a bike to explore Central Park at your own pace, with various rental options including guided tours or self-guided adventures.",
+            "lists":[
+                "Regular Bike",
+                "Tandem Bike"
+            ],
+            "image":"/img/CP/CP-1.jpg",
+            "show":"show"
+        },
+        {
+            "title":"Horse Carriage Rides",
+            "intro":"Experience the charm of Central Park with a horse-drawn carriage ride, complete with a knowledgeable guide to narrate your journey.",
+            "lists":[
+                "Small Carriage",
+                "Large Carriage"
+            ],
+            "image":"/img/CP/CP-2.jpg"
+        },
+        {
+            "title":"Picnic Planning",
+            "intro":"Let a service plan a delightful picnic in the park, providing a gourmet spread of your choice and comfortable seating arrangements.",
+            "lists":[
+                "Standard Picnic",
+                "Vegan Picnic",
+                "Kosher Picnic"
+            ],
+            "image":"/img/CP/CP-3.jpg"
+        },
+        {
+            "title":"Photography Tours",
+            "intro":"Capture the beauty of Central Park with a professional photographer guiding you to the best photo spots.",
+            "lists":[
+                "Digital Photography",
+                "Film Photography"
+            ],
+            "image":"/img/CP/CP-4.jpg"
+        }
+    ],
+    "packages":[
+        {
+            "title":"Central Park Nature Explorer Package",
+            "image":"/img/CP/CP-5.jpg",
+            "text":"Embark on a 2-day exploration with bike rentals, a guided nature walk, and a customized picnic in Central Park.",
+            "price":"900",
+            "duration":"2 Days"
+        },
+        {
+            "title":"Central Park Romance Getaway",
+            "image":"/img/CP/CP-6.jpg",
+            "text":"Enjoy a romantic weekend with a horse-drawn carriage ride, a sunset picnic, and a 2-night stay in a luxury hotel.",
+            "price":"2000",
+            "duration":"2 Days"
+        },
+        {
+            "title":"Central Park Adventure Package",
+            "image":"/img/CP/CP-7.jpg",
+            "text":"For the outdoor enthusiast, this 3-day package includes bike rentals, a paddleboat excursion, and a guided bird-watching tour.",
+            "price":"1000",
+            "duration":"3 Days"
+        },
+        {
+            "title":"Central Park Family Fun Package",
+            "image":"/img/CP/CP-8.jpg",
+            "text":"Bring the family for a 2-day adventure, including bike rentals, a carousel ride, and a family-friendly picnic in the park.",
+            "price":"800",
+            "duration":"2 Days"
+        },
+        {
+            "title":"Central Park Arts and Culture Package",
+            "image":"/img/CP/CP-9.jpg",
+            "text":"Immerse yourself in the cultural side of Central Park with a 2-day itinerary featuring live performances, art installations, and picnicking.",
+            "price":"500",
+            "duration":"2 Days"
+        },
+        {
+            "title":"Central Park Wellness Retreat",
+            "image":"/img/CP/CP-10.jpg",
+            "text":"Recharge and relax in the park with a 3-day wellness package that includes yoga classes, guided meditation, and spa treatments.",
+            "price":"1000",
+            "duration":"3 Days"
+        }
+    ]
+}

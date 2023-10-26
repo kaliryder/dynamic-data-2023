@@ -1,0 +1,95 @@
+{
+    "title":"The Museum of Modern Art",
+    "description":"MoMA is a world-renowned institution showcasing a stunning collection of modern and contemporary art. Visitors can admire works by artists like Picasso, Van Gogh, and Warhol. The museum is an inspiring hub for art aficionados and those looking to explore the creative spirit of Manhattan.",
+    "slideshow":[
+        "/img/slides/slide-1.jpg",
+        "/img/slides/slide-2.jpg",
+        "/img/slides/slide-3.jpg"
+    ],
+    "services":[
+        {
+            "title":"MoMA Guided Tours",
+            "intro":"Explore MoMA's collections with expert-guided tours tailored to different art movements and themes.",
+            "lists":[
+                "Digital Art Tour",
+                "Love Themes Tour",
+                "Expressionism Tour"
+            ],
+            "image":"/img/MOMA/MOMA-1.jpg",
+            "show":"show"
+        },
+        {
+            "title":"Artwork Reproduction Services",
+            "intro":"Get reproductions of your favorite MoMA artworks to take home as a unique memento.",
+            "lists":[
+                "Commissioner's Choice",
+                "Artist's Choice"
+            ],
+            "image":"/img/MOMA/MOMA-2.jpg"
+        },
+        {
+            "title":"Custom Art Classes",
+            "intro":"Take art classes inspired by the works at MoMA, led by professional artists.",
+            "lists":[
+                "Painting Class",
+                "Drawing Class",
+                "Sculpting Class"
+            ],
+            "image":"/img/MOMA/MOMA-3.jpg"
+        },
+        {
+            "title":"Personal Curator Consultation",
+            "intro":"Consult with a curator to receive personalized insights and recommendations during your visit.",
+            "lists":[
+                "Physical Space Curation",
+                "Digital Space Curation",
+                "Integrated Space Curation"
+            ],
+            "image":"/img/MOMA/MOMA-4.jpg"
+        }
+    ],
+    "packages":[
+        {
+            "title":"MoMA Art Lover's Weekend",
+            "image":"/img/MOMA/MOMA-5.jpg",
+            "text":"Dive into the world of modern art with a 2-day stay, guided tours, art classes, and admission to MoMA.",
+            "price":"800",
+            "duration":"2 Days"
+        },
+        {
+            "title":"Art Connoisseur Package",
+            "image":"/img/MOMA/MOMA-6.jpg",
+            "text":"Enjoy a 3-day art-filled experience with curator consultations, special access to MoMA, and tickets to art-related events in the city.",
+            "price":"2000",
+            "duration":"3 Days"
+        },
+        {
+            "title":"MoMA Family Discovery Package",
+            "image":"/img/MOMA/MOMA-7.jpg",
+            "text":"Bring the family for a 2-day visit, featuring interactive tours, art classes for kids, and accommodations near the museum.",
+            "price":"3000",
+            "duration":"2 Days"
+        },
+        {
+            "title":"MoMA VIP Experience",
+            "image":"/img/MOMA/MOMA-8.jpg",
+            "text":"Elevate your visit with a 1-day package offering exclusive access to behind-the-scenes areas, private curator consultations, and a gourmet dining experience.",
+            "price":"1500",
+            "duration":"1 Day"
+        },
+        {
+            "title":"Art and Dining Package",
+            "image":"/img/MOMA/MOMA-9.jpg",
+            "text":"Combine your love for art and food with a 2-day package including MoMA admission and reservations at top-notch art-inspired restaurants in the city.",
+            "price":"1500",
+            "duration":"2 Days"
+        },
+        {
+            "title":"MoMA Masterclass Retreat",
+            "image":"/img/MOMA/MOMA-10.jpg",
+            "text":"Immerse yourself in art creation with a 4-day retreat that includes art classes, access to MoMA's resources, and a showcase of your work in a gallery.",
+            "price":"2000",
+            "duration":"4 Days"
+        }
+    ]
+}
