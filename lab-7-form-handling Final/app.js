@@ -5,11 +5,11 @@ const expressHandlebars = require('express-handlebars')
 
 const app = express()
 
+const handler = require('./lib/handler')
+
 const bodyParser = require('body-parser')
 
-app.use(bodyParser.urlencoded({extended: true}))
-
-const handler = require('./lib/handler')
+app.use(bodyParser.urlencoded({ extended: true}))
 
 //configure our express app to use handlebars
 app.engine('handlebars', expressHandlebars.engine({
@@ -21,6 +21,8 @@ app.set('view engine','handlebars')
 
 const port = process.env.port || 3000
 
+const emails = []
+
 app.get('/',(req,res)=>{
     res.render('page',{req})
 })
@@ -29,17 +31,25 @@ app.get('/mad',(req,res)=>{
     const data = require('./data/mad-data.json')
     res.render('madform',{data})
 })
-
 app.get('/madprocess',(req,res)=>{
    res.render('madprocess',{req}) 
 })
+//newsletter section
+
 
 app.get('/newsletter-signup', handler.newsletterSignup)
 
-app.post('/newsletter-signup/process', handler.newsletterSignupProcess)
-
 app.get('/newsletter/list', handler.newsletterSignupList)
 
+app.get('/newsletter/details/:email',handler.newsletterUser)
+
+app.get('/newsletter/delete/:email',handler.newsletterUserDelete)
+
+app.post('/newsletter-signup/process', handler.newsletterSignupProcess)
+
+app.get('/newsletter/thankyou',(req,res) =>{
+    res.render('thankyou')
+})
 //Error handling ->  app.use() basic express route 
 app.use((req,res) => {
     res.status(404)

@@ -1,0 +1,11 @@
+{{#each users}}
+<ul>
+    <li><strong>Name: </strong> {{this.firstname}} {{this.lastname}}</li>
+    <li><strong>Email: </strong> {{this.email}}</li>
+    <li><strong>Address: </strong> 
+    {{this.address}}<br>
+    {{this.city}}, {{this.state}}<br>
+    {{this.zip}} 
+     </li>
+</ul>
+{{/each}}
