@@ -1,0 +1,95 @@
+{
+    "title":"Welcome To Manhattan",
+    "description":"Nestled within the heart of New York City, Manhattan is a bustling island of commerce, culture, and ambition. Its iconic skyline of towering skyscrapers, cradling Central Park's green expanse, is a testament to the enduring spirit of human aspiration and the vibrant tapestry of urban life.",
+    "slideshow":[
+        "/img/slides/slide-1.jpg",
+        "/img/slides/slide-2.jpg",
+        "/img/slides/slide-3.jpg"
+    ],
+    "services":[
+        {
+            "title":"Skyline Dining Experience",
+            "intro":"Enjoy a gourmet meal on a private rooftop with panoramic views of Manhattan's iconic skyline.",
+            "lists":[
+                "Italian Cuisine",
+                "Medditeranean Cuisine",
+                "Japanese Cuisine"
+            ],
+            "image":"/img/homepage/home-1.jpg",
+            "show":"show"
+        },
+        {
+            "title":"Central Park Wellness Retreat",
+            "intro":"Immerse yourself in a day of relaxation and rejuvenation, from yoga in the park to spa treatments, set against the backdrop of Central Park's lush greenery.",
+            "lists":[
+                "Morning Retreat",
+                "Afternoon Retreat",
+                "Evening Retreat"
+            ],
+            "image":"/img/homepage/home-2.jpg"
+        },
+        {
+            "title":"Historical Walking Tour",
+            "intro":"Delve into Manhattan's rich history with a guided tour that takes you through key landmarks, sharing stories of the city's past.",
+            "lists":[
+                "East Side Tour",
+                "West Side Tour",
+                "Joint Tour"
+            ],
+            "image":"/img/homepage/home-3.jpg"
+        },
+        {
+            "title":"Theater District VIP Night Out",
+            "intro":"Get the red carpet treatment with premium tickets to a Broadway show, followed by a post- performance dinner at a trendy restaurant in the Theater District.",
+            "lists":[
+                "Comedy Show",
+                "Drama Show"
+            ],
+            "image":"/img/homepage/home-4.jpg"
+        }
+    ],
+    "packages":[
+        {
+            "title":"Manhattan Marvel",
+            "image":"/img/homepage/home-5.jpg",
+            "text":"An all-inclusive stay at a luxury hotel, including sightseeing tours to famous landmarks like the Statue of Liberty, Empire State Building, and museums.",
+            "price":"3000",
+            "duration":"3 Days"
+        },
+        {
+            "title":"Arts and Culture Escape",
+            "image":"/img/homepage/home-6.jpg",
+            "text":"Dive into the cultural scene with access to art galleries, theaters, and a personalized art tour, culminating in a creative workshop or gallery reception.",
+            "price":"800",
+            "duration":"1 Day"
+        },
+        {
+            "title":"Foodie's Dream Adventure",
+            "image":"/img/homepage/home-7.jpg",
+            "text":"Savor the diverse culinary offerings of Manhattan with a guided food tour, cooking classes, and reservations at renowned restaurants.",
+            "price":"4000",
+            "duration":"2 Days"
+        },
+        {
+            "title":"Luxury Shopper's Paradise",
+            "image":"/img/homepage/home-8.jpg",
+            "text":"Shop 'til you drop with a personal shopper, exclusive discounts, and a private fashion show featuring the latest trends.",
+            "price":"1000",
+            "duration":"1 Day"
+        },
+        {
+            "title":"Jazz and Blues Experience",
+            "image":"/img/homepage/home-9.jpg",
+            "text":"Enjoy the soulful sounds of Manhattan's jazz and blues scene with live performances, private jam sessions, and a tour of historic music venues.",
+            "price":"800",
+            "duration":"1 Day"
+        },
+        {
+            "title":"Romantic Escape",
+            "image":"/img/homepage/home-10.jpg",
+            "text":"For couples, this package includes a romantic carriage ride in Central Park, a sunset cruise, and a candlelit dinner with stunning city views.",
+            "price":"1500",
+            "duration":"1 Day"
+        }
+    ]
+}

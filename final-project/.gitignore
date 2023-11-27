@@ -1,0 +1,5 @@
+#ignore packages installed by npm
+node_modules
+
+#ignore system files
+.DS_STORE, *.bak

@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500&family=Dawning+of+a+New+Day&family=Gwendolyn:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+.nanumMyeongjo-light {font-family: 'Nanum Myeongjo', serif; font-weight: 400}
+.nanumMyeongjo-regular {font-family: 'Nanum Myeongjo', serif; font-weight: 700}
+.nanumMyeongjo-bold {font-family: 'Nanum Myeongjo', serif; font-weight: 800}
+
+.dawningOfANewDay {font-family: 'Dawning of a New Day', cursive}
+
+.gwendolyn-regular {font-family: 'Gwendolyn', cursive; font-weight: 400}
+.gwendolyn-bold {font-family: 'Gwendolyn', cursive; font-weight: 700}
+
+.archivoNarrow-regular {font-family: 'Archivo Narrow', sans-serif; font-weight: 400}
+.archivoNarrow-bold {font-family: 'Archivo Narrow', sans-serif; font-weight: 500}
+
+.white-bg {
+    background-color: white;
+}
+
+.primary-color {
+    background-color: #DBE9E7;
+}
+
+.primary-color-light, nav .secondary-color-light:hover {
+    background-color: #BED8D4;
+}
+
+.accordion-button:not(.collapsed) {
+    color:9BD7D6;
+    background-color: #78D5D7;
+}
+
+.primary-color-bg {
+    background-color: #E9F1F0;
+}
+
+.primary-color-light-bg {
+    background-color: #F7F9F9;
+}
+
+.secondary-color {
+    background-color: #63D2FF;
+}
+
+.secondary-color-light {
+    background-color: #95E0FF;
+}
+
+.secondary-color-bg {
+    background-color: #7EDAFF;
+}
+
+.secondary-color-light-bg {
+    background-color: #9FE3FF;
+}
+
+.collapse a {
+    padding: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.nav-content {
+    padding: 1rem;
+}
+
+.navbar-brand img {
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.d-flex {
+    padding: 2rem;
+    padding-left: 3rem;
+}
+
+p {
+    padding: 2rem;
+    padding-bottom: 0rem;
+}
+
+h1 {
+    padding: 2rem;
+}
+
+.section-header {
+    padding: 2rem;
+    padding-top: 0rem;
+}
+
+.owl-dots {
+    padding: 2rem;
+}
+
+.container-fluid {
+    padding: 1rem;
+}
+
+.accordion {
+    padding: 1rem;
+}
+
+.owl-nav {
+    display: none;
+}
+
+.section-divider {
+    padding: 1rem;
+}
+
+.gallery-img img {
+    object-fit: cover;
+    height: 20rem;
+    aspect-ratio: 1/1;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 20rem;
+    aspect-ratio: 1/1;
+}
+
+.card-text {
+    padding: 2rem;
+}
+
+.img-fluid {
+    object-fit: cover;
+    height: 15rem;
+    width: 30rem;
+    aspect-ratio: 1/1;
+    padding-left: 5rem;
+}
+
+.carousel-img-fluid {
+    object-fit: cover;
+    height: 30rem;
+    aspect-ratio: 1/1;
+}
+
+footer {
+    padding: 2rem;
+}

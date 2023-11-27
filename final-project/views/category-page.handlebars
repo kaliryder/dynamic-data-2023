@@ -1,0 +1,25 @@
+<!--header-->
+<div class="section-divider" id="about"></div>
+<h1 class="primary-color-light dawningOfANewDay">{{category}}</h1>
+
+<!--image gallery : products-->
+{{#if products}}
+<div class="section-divider" id="gallery"></div>
+<div class="row">
+  {{#each products}}
+    <div class="col-3">
+      <!--card-->
+      <a href="/item/{{this.id}}" class="gallery-img">
+        <img src="{{image}}" alt="{{title}}" class="img-thumbnail">
+        <h5>{{this.title}}</h5>
+        <h7>{{this.price}}</h7>
+      </a>
+    </div>
+  {{/each}}
+</div>
+{{/if}}
+
+<!--footer-->
+<footer class="white-bg">
+  Copyright 2023 - Kali Ryder
+</footer>

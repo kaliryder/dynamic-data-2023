@@ -1,0 +1,82 @@
+<!--header-->
+<div class="section-divider" id="about"></div>
+
+<!--slideshow : items-->
+{{#if slideshow}}
+  <div class="owl-slideshow owl-carousel owl-theme">
+    {{#each slideshow}}
+      <div class="item">
+        <a href="/item/{{id}}" class="gallery-img">
+          <img class="carousel-img-fluid" src="{{this.image}}" alt="{{this.title}}">
+        </a>
+      </div>
+    {{/each}}      
+  </div>
+{{/if}}
+
+<!--carousel slider : featured products-->
+{{#if products}}
+<div class="section-divider" id="services"></div>
+<h2 class="section-header dawningOfANewDay" id="packages">Featured Products</h2>
+<div class="owl-theme owl-carousel owl-packages">
+    {{#each products}}
+    <div class="card">
+        {{#if this.image}}
+        <a href="/item/{{this.id}}" class="gallery-img">
+          <img src="{{this.image}}" class="card-img-top" alt="...">
+        </a>
+        {{/if}}
+        <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+        </div>
+        <ul class="list-group list-group-flush nanumMyeongjo-regular">
+            <li class="list-group-item">{{this.price}}</li>
+        </ul>
+    </div>
+    {{/each}}
+</div>
+{{/if}}
+
+<!--image gallery : featured categories-->
+<div class="section-divider" id="gallery"></div>
+<h2 class="section-header dawningOfANewDay">Category Gallery</h2>
+<div class="row">
+  <!--tops card-->
+  {{#if top}}
+    <div class="col-3">
+      {{#each top}}
+        <a href="/item/{{id}}" class="gallery-img">
+          <img src="{{image}}" alt="{{title}}" class="img-thumbnail">
+          <h5>Tops</h5>
+        </a>
+      {{/each}}
+    </div>
+  {{/if}}
+  <!--bottoms card-->
+  {{#if bottom}}
+    <div class="col-3">
+      {{#each bottom}}
+        <a href="/item/{{id}}" class="gallery-img">
+          <img src="{{image}}" alt="{{title}}" class="img-thumbnail">
+          <h5>Bottoms</h5>
+        </a>
+      {{/each}}
+    </div>
+  {{/if}}
+  <!--outerwear card-->
+  {{#if outerwear}}
+    <div class="col-3">
+      {{#each outerwear}}
+        <a href="/item/{{id}}" class="gallery-img">
+          <img src="{{image}}" alt="{{title}}" class="img-thumbnail">
+          <h5>Outerwear</h5>
+        </a>
+      {{/each}}
+    </div>
+  {{/if}}
+</div>
+
+<!--footer-->
+<footer class="white-bg">
+  Copyright 2023 - Kali Ryder | Text courtesy of ChatGPT3.5
+</footer>

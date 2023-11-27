@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Kali",
+    "address": "123 Periwinkle Ave",
+    "email": "kikirydes@gmail.com",
+    "phone": "2038027230",
+    "items": [
+      {
+        "id": 14,
+        "category": "Tops",
+        "title": "Red Crop Top",
+        "image": "/img/tops/t-2-a.jpg",
+        "images": [
+          "/img/tops/t-2-a.jpg",
+          "/img/tops/t-2-b.jpg",
+          "/img/tops/t-2-c.jpg",
+          "/img/tops/t-2-d.jpg"
+        ],
+        "price": "$60"
+      }
+    ]
+  },
+  {
+    "name": "Kali",
+    "address": "123 Periwinkle Ave",
+    "email": "kikirydes@gmail.com",
+    "phone": "2038027230",
+    "items": [
+      {
+        "id": 31,
+        "category": "Bottoms",
+        "title": "Black Drawstring Pants",
+        "image": "/img/bottoms/b-7-a.jpg",
+        "images": [
+          "/img/bottoms/b-7-a.jpg",
+          "/img/bottoms/b-7-b.jpg",
+          "/img/bottoms/b-7-c.jpg",
+          "/img/bottoms/b-7-d.jpg"
+        ],
+        "price": "$50"
+      }
+    ]
+  }
+]
