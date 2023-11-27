@@ -1,0 +1,13 @@
+<h1>Form Handling</h1>
+{{> basic}}
+<p>
+    {{#if req.query.name}}
+    My name is {{ req.query.name}} and ....
+    {{/if}}
+</p>
+
+<p>
+{{#if req.query.color}}
+Your favorite color is: {{req.query.color}}
+{{/if}}
+</p>

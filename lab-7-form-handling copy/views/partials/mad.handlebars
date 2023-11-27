@@ -1,0 +1,25 @@
+{{#if data.fields}}
+<form action="/madprocess">
+{{#each data.fields}}
+
+<div class="mb-3">
+        <label class="form-label" for="field{{this.name}}">{{this.desc}} </label>
+        <input class="form-control" type="{{this.type}}" id="field{{this.name}}" name="{{this.name}}">
+    </div>
+
+{{/each}}
+
+ <div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </div>
+</form>
+
+{{#each data.fields}}
+
+<< req.query.{{this.name}} >> <br>
+
+{{/each}}
+
+
+
+{{/if}}
