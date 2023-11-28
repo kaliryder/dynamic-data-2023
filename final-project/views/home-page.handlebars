@@ -38,45 +38,47 @@
 {{/if}}
 
 <!--image gallery : featured categories-->
-<div class="section-divider" id="gallery"></div>
-<h2 class="section-header dawningOfANewDay">Category Gallery</h2>
-<div class="row">
-  <!--tops item-->
-  {{#if top}}
-    <div class="col-3">
-      {{#each top}}
-        <a href="/item/{{id}}" class="gallery-img">
-          <img src="{{image}}" alt="{{title}}" class="img-thumbnail">
-          <h5>Tops</h5>
-        </a>
-      {{/each}}
-    </div>
-  {{/if}}
-  <!--bottoms item-->
-  {{#if bottom}}
-    <div class="col-3">
-      {{#each bottom}}
-        <a href="/item/{{id}}" class="gallery-img">
-          <img src="{{image}}" alt="{{title}}" class="img-thumbnail">
-          <h5>Bottoms</h5>
-        </a>
-      {{/each}}
-    </div>
-  {{/if}}
-  <!--outerwear item-->
-  {{#if outerwear}}
-    <div class="col-3">
-      {{#each outerwear}}
-        <a href="/item/{{id}}" class="gallery-img">
-          <img src="{{image}}" alt="{{title}}" class="img-thumbnail">
-          <h5>Outerwear</h5>
-        </a>
-      {{/each}}
-    </div>
-  {{/if}}
+<div class="gallery-container">
+  <div class="section-divider" id="gallery"></div>
+  <h2 class="section-header dawningOfANewDay">Category Gallery</h2>
+  <div class="row">
+    <!--tops item-->
+    {{#if top}}
+      <div class="col-3">
+        {{#each top}}
+          <a href="/item/{{id}}" class="gallery-img">
+            <img src="{{image}}" alt="{{title}}" class="img-thumbnail">
+            <h5>Tops</h5>
+          </a>
+        {{/each}}
+      </div>
+    {{/if}}
+    <!--bottoms item-->
+    {{#if bottom}}
+      <div class="col-3">
+        {{#each bottom}}
+          <a href="/item/{{id}}" class="gallery-img">
+            <img src="{{image}}" alt="{{title}}" class="img-thumbnail">
+            <h5>Bottoms</h5>
+          </a>
+        {{/each}}
+      </div>
+    {{/if}}
+    <!--outerwear item-->
+    {{#if outerwear}}
+      <div class="col-3">
+        {{#each outerwear}}
+          <a href="/item/{{id}}" class="gallery-img">
+            <img src="{{image}}" alt="{{title}}" class="img-thumbnail">
+            <h5>Outerwear</h5>
+          </a>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
 </div>
 
 <!--footer-->
 <footer class="white-bg">
-  Copyright 2023 - Kali Ryder | Text courtesy of ChatGPT3.5
+  Copyright 2023 - Kali Ryder
 </footer>

@@ -108,18 +108,18 @@ function shuffleArray(array) {
     return array;
 }
 
-// Function to choose products from the same category
+//function to choose products from the same category
 function chooseProductsByCategory(allProducts, category, numProducts, excludeProductId) {
     const productsInCategory = allProducts.filter(product => {
         return product.id !== excludeProductId && getCategoryFromId(product.id) === category;
     });
 
-    // Shuffle the products and select the first four
+    //shuffle the products and select the first four
     const shuffledProducts = shuffleArray(productsInCategory);
     return shuffledProducts.slice(0, numProducts);
 }
 
-// Function to determine the category based on the product ID range
+//function to determine the category based on the productId range
 function getCategoryFromId(productId) {
     if (productId >= 1 && productId <= 12) {
         return 'outerwear';
@@ -128,49 +128,52 @@ function getCategoryFromId(productId) {
     } else if (productId >= 25 && productId <= 36) {
         return 'bottoms';
     }
-    // Handle unknown category or invalid product ID range
+    //handle unknown category or invalid productId range
     return null;
 }
 
-// define routes for products
+//define routes for products
 productData.products.forEach(product => {
     app.get(`/product/${product.id}`, (req, res) => {
-      // render the item detail page with the specific item data
+      //render the item detail page with the specific item data
       res.render('itemdetails-page', { product, productData });
     });
 });
 
-// route for Tops
+//route for Tops page
 app.get('/tops', (req, res) => {
     const topsData = require('./data/products.json');
     const topsProducts = productData.products.filter(product => getCategoryFromId(product.id) === 'tops');
     res.render('category-page', { data: topsData, products: topsProducts, category: 'Tops' });
 });
 
-// route for Bottoms
+//route for Bottoms page
 app.get('/bottoms', (req, res) => {
     const bottomsData = require('./data/products.json');
     const bottomsProducts = productData.products.filter(product => getCategoryFromId(product.id) === 'bottoms');
     res.render('category-page', { data: bottomsData, products: bottomsProducts, category: 'Bottoms' });
 });
 
-// route for Outerwear
+//route for Outerwear page
 app.get('/outerwear', (req, res) => {
     const outerwearData = require('./data/products.json');
     const outerwearProducts = productData.products.filter(product => getCategoryFromId(product.id) === 'outerwear');
     res.render('category-page', { data: outerwearData, products: outerwearProducts, category: 'Outerwear' });
 });
 
+//route for About page
 app.get('/about',(req,res)=>{
     var data = require('./data/info.json')
     res.render('about-page',{ data })
 })
 
+//route for Thank You page
 app.get('/thankyou',(req,res)=>{
     var data = require('./data/info.json')
     res.render('thankyou-page',{ data })
 })
 
+//function to add products to cart
 function addToCart(productId) {
     const product = productData.products.find(item => item.id === parseInt(productId, 10));
 
@@ -182,6 +185,7 @@ function addToCart(productId) {
     return false;
 }
 
+//redirects back to product page after adding to cart
 app.post('/addToCart/:id', (req, res) => {
     const productId = req.params.id;
 

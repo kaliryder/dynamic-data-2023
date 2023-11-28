@@ -40,5 +40,26 @@
         "price": "$50"
       }
     ]
+  },
+  {
+    "name": "Aly",
+    "address": "123 Periwinkle Rd",
+    "email": "kiki@gmail.com",
+    "phone": "2039282738",
+    "items": [
+      {
+        "id": 2,
+        "category": "Outerwear",
+        "title": "Green Zip-Up Sweatshirt",
+        "image": "/img/outerwear/o-2-a.jpg",
+        "images": [
+          "/img/outerwear/o-2-a.jpg",
+          "/img/outerwear/o-2-b.jpg",
+          "/img/outerwear/o-2-c.jpg",
+          "/img/outerwear/o-2-d.jpg"
+        ],
+        "price": "$30"
+      }
+    ]
   }
 ]
