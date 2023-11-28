@@ -138,13 +138,54 @@ footer {
 
 .img-thumbnail {
     height: 30rem;
-    display: block; /* Make the img a block-level element */
+    display: block;
     margin: auto;
 }
 
-.cart-img {
-    object-fit: cover;
-    height: 10rem;
-    aspect-ratio: 1/1;
+/* cart styles */
+
+ul.cart-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
-  
+
+ul.cart-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.cart-img {
+    width: 10rem; 
+    height: auto;
+    margin-right: 20px; 
+}
+
+ul.cart-item-details {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.cart-item-details li {
+    padding: 5px;
+}
+
+/* form styles */
+
+#checkout-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; 
+    margin: 0; 
+}
+
+#checkout-form label {
+    margin-bottom: 5px; 
+}
+
+#checkout-form input, 
+#checkout-form button {
+    margin-bottom: 10px; 
+}

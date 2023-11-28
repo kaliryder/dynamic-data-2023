@@ -5,13 +5,20 @@
 <!--if cart isn't empty, display data-->
 {{#if cart.length}}
     <!--display cart items-->
-    <ul>
+    <ul class="cart-list">
         {{#each cart}}
-            <li><img class="cart-img" src="{{this.image}}" alt="{{this.title}}">{{this.title}} - {{this.price}}</li>
+            <li>
+                <img class="cart-img" src="{{this.image}}" alt="{{this.title}}">
+                <ul class="cart-item-details">
+                    <li>{{this.title}}</li>
+                    <li>{{this.price}}</li>
+                    <li>One of our fashionable {{this.category}}</li>
+                </ul>
+            </li>
         {{/each}}
-    </ul>
+    </ul>   
     <!--display forms-->
-    <form method="post" action="/checkout">
+    <form id="checkout-form" method="post" action="/checkout">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
 
