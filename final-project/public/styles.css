@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500&family=Dawning+of+a+New+Day&family=Gwendolyn:wght@400;700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
+/* fonts */
 .nanumMyeongjo-light {font-family: 'Nanum Myeongjo', serif; font-weight: 400}
 .nanumMyeongjo-regular {font-family: 'Nanum Myeongjo', serif; font-weight: 700}
 .nanumMyeongjo-bold {font-family: 'Nanum Myeongjo', serif; font-weight: 800}
@@ -12,58 +13,33 @@
 .archivoNarrow-regular {font-family: 'Archivo Narrow', sans-serif; font-weight: 400}
 .archivoNarrow-bold {font-family: 'Archivo Narrow', sans-serif; font-weight: 500}
 
-.white-bg {
-    background-color: white;
+/* colors */
+.color1 {
+    background-color: red;
 }
 
-.primary-color {
-    background-color: #DBE9E7;
+.color2 {
+    background-color: blueviolet;
 }
 
-.primary-color-light, nav .secondary-color-light:hover {
-    background-color: #BED8D4;
+.color3 {
+    background-color: green;
 }
 
-.accordion-button:not(.collapsed) {
-    color:9BD7D6;
-    background-color: #78D5D7;
-}
-
-.primary-color-bg {
-    background-color: #E9F1F0;
-}
-
-.primary-color-light-bg {
-    background-color: #F7F9F9;
-}
-
-.secondary-color {
-    background-color: #63D2FF;
-}
-
-.secondary-color-light {
-    background-color: #95E0FF;
-}
-
-.secondary-color-bg {
-    background-color: #7EDAFF;
-}
-
-.secondary-color-light-bg {
-    background-color: #9FE3FF;
-}
-
-.collapse a {
+/* navbar */
+.container-fluid {
     padding: 1rem;
-    margin-right: 1rem;
-    margin-left: 1rem;
 }
 
 .nav-content {
     padding: 1rem;
 }
 
-.navbar-brand img {
+.nav-item:hover {
+    background-color: green;
+}
+
+.navbar-logo img {
     padding-bottom: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
@@ -74,6 +50,7 @@
     padding-left: 3rem;
 }
 
+/* basic tags */
 p {
     padding: 2rem;
     padding-bottom: 0rem;
@@ -83,45 +60,27 @@ h1 {
     padding: 2rem;
 }
 
+/* structural elements */
 .section-header {
     padding: 2rem;
     padding-top: 0rem;
-}
-
-.owl-dots {
-    padding: 2rem;
-}
-
-.container-fluid {
-    padding: 1rem;
-}
-
-.accordion {
-    padding: 1rem;
-}
-
-.owl-nav {
-    display: none;
 }
 
 .section-divider {
     padding: 1rem;
 }
 
-.gallery-img img {
-    object-fit: cover;
-    height: 20rem;
-    aspect-ratio: 1/1;
-}
-
-.card-img-top {
-    object-fit: cover;
-    height: 20rem;
-    aspect-ratio: 1/1;
-}
-
-.card-text {
+footer {
     padding: 2rem;
+}
+
+/* owl carousel */
+.owl-dots {
+    padding: 2rem;
+}
+
+.owl-nav {
+    display: none;
 }
 
 .img-fluid {
@@ -138,6 +97,20 @@ h1 {
     aspect-ratio: 1/1;
 }
 
-footer {
+/* gallery */
+
+.gallery-img img {
+    object-fit: cover;
+    height: 20rem;
+    aspect-ratio: 1/1;
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 20rem;
+    aspect-ratio: 1/1;
+}
+
+.card-text {
     padding: 2rem;
 }

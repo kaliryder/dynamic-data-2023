@@ -1,15 +1,19 @@
 <!--header-->
 <div class="section-divider" id="about"></div>
-<h1 class="primary-color-light dawningOfANewDay">Shopping Cart</h1>
+<h1 class="color3 dawningOfANewDay">Shopping Cart</h1>
 
 <h2>Your Shopping Cart</h2>
 
+<!--if cart isn't empty, display data-->
 {{#if cart.length}}
+    <!--display cart items-->
     <ul>
         {{#each cart}}
+            <li><img src="{{this.image}}" alt="{{this.title}}"></li>
             <li>{{this.title}} - {{this.price}}</li>
         {{/each}}
     </ul>
+    <!--display forms-->
     <form method="post" action="/checkout">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>

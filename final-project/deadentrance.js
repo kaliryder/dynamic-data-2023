@@ -1,62 +1,72 @@
+//declare express consts
 const express = require('express')
 const expressHandlebars = require('express-handlebars')
+const app = express()
+
+//fs to read json files
 const fs = require('fs')
 
+//empty cart array to hold item data
 const cart = [];
-
-const app = express()
 
 //static files or folders are specified before any route
 app.use(express.static(__dirname + '/public'))
 app.use(express.urlencoded({ extended: true }));
+
 //configure our express app to use handlebars
 app.engine('handlebars', expressHandlebars.engine({
     defaultLayout: 'main',
 }))
 app.set('view engine','handlebars')
-//ends handlebar configuration
 
+//set products.json data to const
 const productData = JSON.parse(fs.readFileSync('data/products.json', 'utf-8'));
 
+//setup port
 const port = process.env.port || 3000
 
-//routes go before 404 and 500
+//home route
 app.get('/',(req,res)=>{
     const allProducts = productData.products;
     var data = require('./data/products.json')
 
-    // Choose a subset of 5 random products
+    //choose a subset of 5 random products for featured products
     const selectedProducts = chooseRandomProducts(allProducts, 5);
+    //choose a subset of 5 random products for slideshow
     const slideshowProducts = chooseRandomProducts(allProducts, 5);
+    //sort of products of each category into their own consts
     const topProducts = productData.products.filter(product => getCategoryFromId(product.id) === 'tops');
     const bottomsProducts = productData.products.filter(product => getCategoryFromId(product.id) === 'bottoms');
     const outerwearProducts = productData.products.filter(product => getCategoryFromId(product.id) === 'outerwear');
-
+    //choose one random product from each category
     const topProduct = chooseRandomProducts(topProducts, 1);
     const bottomsProduct = chooseRandomProducts(bottomsProducts, 1);
     const outerwearProduct = chooseRandomProducts(outerwearProducts, 1);
-
+    
+    //render view
     res.render('home-page',{data, products: selectedProducts, slideshow: slideshowProducts, top: topProduct, bottom: bottomsProduct, outerwear: outerwearProduct})
 })
 
-// Function to choose a random subset of products
-function chooseRandomProducts(allProducts, numProducts) {
-    const shuffledProducts = [...allProducts].sort(() => 0.5 - Math.random());
-    return shuffledProducts.slice(0, numProducts);
-}
+    //function to choose a random subset of products
+    function chooseRandomProducts(allProducts, numProducts) {
+        const shuffledProducts = [...allProducts].sort(() => 0.5 - Math.random());
+        return shuffledProducts.slice(0, numProducts);
+    }
 
+//route items to individual product pages
 app.get('/item/:id', (req, res) => {
     const productId = req.params.id;
-    // Find the product with the matching ID in your productData
+
+    //find the product with the matching ID in your productData
     const selectedProduct = productData.products.find(item => item.id === parseInt(productId, 10));
 
     if (!selectedProduct) {
-        // Handle case where product is not found (e.g., display an error page)
+        //handle case where product is not found
         res.status(404).send('Product not found');
         return;
     }
 
-    // Determine the category based on the product ID range
+    //determine the category based on the productId range
     let category;
     if (productId >= 1 && productId <= 12) {
         category = 'outerwear';
@@ -65,15 +75,15 @@ app.get('/item/:id', (req, res) => {
     } else if (productId >= 25 && productId <= 36) {
         category = 'bottoms';
     } else {
-        // Handle unknown category or invalid product ID range
+        //handle unknown category or invalid product ID range
         res.status(404).send('Invalid product ID range');
         return;
     }
 
-    // Choose four other products from the same category
+    //choose four other products from the same category
     const otherProducts = chooseProductsByCategory(productData.products, category, 4, productId);
 
-    // Render the 'itemdetails-page' view with the selected product and other products
+    //render view with the selected product and other products
     res.render('itemdetails-page', {
         product: selectedProduct,
         otherProducts,
@@ -81,17 +91,18 @@ app.get('/item/:id', (req, res) => {
     });
 });
 
-// Redirect route for individual products
+//redirect route for individual products
 app.get('/product/:id', (req, res) => {
     const productId = req.params.id;
-    // Redirect to the '/item/:id' route to ensure consistent handling of otherProducts
+    //redirect to the '/item/:id' route to ensure consistent handling of otherProducts
     res.redirect(`/item/${productId}`);
 });
 
+//function to shuffle array
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        // Swap array[i] and array[j]
+        //swap array[i] and array[j]
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
@@ -181,16 +192,16 @@ app.post('/addToCart/:id', (req, res) => {
     }
 });
 
-// Route to display the cart page
+//route to display cart page
 app.get('/cart', (req, res) => {
     res.render('cart-page', { cart });
 });
 
-// Route to handle checkout
+//route to handle checkout
 app.post('/checkout', (req, res) => {
     const { name, address, email, phone } = req.body;
 
-    // Create an order object
+    //create order object
     const order = {
         name,
         address,
@@ -199,45 +210,46 @@ app.post('/checkout', (req, res) => {
         items: cart.slice(),
     };
 
-    // Clear the cart after checkout
+    //clear cart after checkout
     cart.length = 0;
 
-    // Save the order data to orders.json
+    //save order data to orders.json
     saveOrder(order);
 
-    res.redirect('/thankyou'); // Redirect to thankyou page after checkout
+    //redirect to thankyou page after checkout
+    res.redirect('/thankyou');
 });
 
-// Function to save order data to orders.json
+//function to save order data to orders.json
 function saveOrder(order) {
     try {
-        // Read existing orders from orders.json
+        //read existing orders from orders.json
         const existingOrders = JSON.parse(fs.readFileSync('./data/orders.json', 'utf-8'));
 
-        // Add the new order to the existing orders
+        //add new order to existing orders
         existingOrders.push(order);
 
-        // Write the updated orders back to orders.json
+        //write the updated orders back to orders.json
         fs.writeFileSync('./data/orders.json', JSON.stringify(existingOrders, null, 2), 'utf-8');
     } catch (error) {
         console.error('Error saving order:', error.message);
     }
 }
 
-//Error handling ->  app.use() basic express route 
+//error handling ->  app.use() basic express route 
 app.use((req,res) => {
     res.status(404)
     res.render('404')
 })
 
-//Server Error 500
+//server error 500
 app.use((error,req,res,next) => {
     console.log(error.message)
     res.status(500)
     res.render('500') 
 }) 
 
-// setup listener
+//setup listener
 app.listen(port,()=>{
     console.log(`Server started http://localhost:${port}`)
     //console.log('Server starter http://localhost:'+port)

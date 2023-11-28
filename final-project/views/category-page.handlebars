@@ -1,6 +1,6 @@
 <!--header-->
 <div class="section-divider" id="about"></div>
-<h1 class="primary-color-light dawningOfANewDay">{{category}}</h1>
+<h1 class="color3 dawningOfANewDay">{{category}}</h1>
 
 <!--image gallery : products-->
 {{#if products}}
@@ -8,7 +8,7 @@
 <div class="row">
   {{#each products}}
     <div class="col-3">
-      <!--card-->
+      <!--gallery item-->
       <a href="/item/{{this.id}}" class="gallery-img">
         <img src="{{image}}" alt="{{title}}" class="img-thumbnail">
         <h5>{{this.title}}</h5>
