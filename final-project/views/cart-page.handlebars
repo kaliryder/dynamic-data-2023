@@ -31,8 +31,11 @@
         <label for="phone">Phone:</label>
         <input type="tel" id="phone" name="phone" required>
 
+        <h5>Total: ${{this.cartPrice}}.00</h5>
+
         <button type="submit">Checkout</button>
     </form>
+
 {{else}}
     <p>Your shopping cart is empty.</p>
 {{/if}}

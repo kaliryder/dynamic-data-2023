@@ -8,6 +8,7 @@ const fs = require('fs')
 
 //empty cart array to hold item data
 const cart = [];
+let cartPrice = 0;
 
 //static files or folders are specified before any route
 app.use(express.static(__dirname + '/public'))
@@ -17,6 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 app.engine('handlebars', expressHandlebars.engine({
     defaultLayout: 'main',
 }))
+
 app.set('view engine','handlebars')
 
 //set products.json data to const
@@ -32,112 +34,68 @@ app.get('/',(req,res)=>{
 
     //choose a subset of 5 random products for featured products
     const selectedProducts = chooseRandomProducts(allProducts, 5);
+
     //choose a subset of 5 random products for slideshow
     const slideshowProducts = chooseRandomProducts(allProducts, 5);
-    //sort of products of each category into their own consts
+
+    //sort products of each category into their own consts
     const topProducts = productData.products.filter(product => getCategoryFromId(product.id) === 'tops');
     const bottomsProducts = productData.products.filter(product => getCategoryFromId(product.id) === 'bottoms');
     const outerwearProducts = productData.products.filter(product => getCategoryFromId(product.id) === 'outerwear');
+
     //choose one random product from each category
     const topProduct = chooseRandomProducts(topProducts, 1);
     const bottomsProduct = chooseRandomProducts(bottomsProducts, 1);
     const outerwearProduct = chooseRandomProducts(outerwearProducts, 1);
     
-    //render view
-    res.render('home-page',{data, products: selectedProducts, slideshow: slideshowProducts, top: topProduct, bottom: bottomsProduct, outerwear: outerwearProduct})
+    //render home view
+    res.render('home-page',{ data, products: selectedProducts, slideshow: slideshowProducts, top: topProduct, bottom: bottomsProduct, outerwear: outerwearProduct })
 })
+
+//helper functions for home route
 
     //function to choose a random subset of products
     function chooseRandomProducts(allProducts, numProducts) {
-        const shuffledProducts = [...allProducts].sort(() => 0.5 - Math.random());
+        //spread operator creates temp copy of allProducts, sorts and assigns to shuffledProducts
+        const shuffledProducts = [...allProducts].sort(() => 0.5 - Math.random()); //0.5 - Math.random creates roughly 50% negative 50% positive values
+        //slice selected first numProducts of shuffled allProducts array
         return shuffledProducts.slice(0, numProducts);
     }
 
-//route items to individual product pages
-app.get('/item/:id', (req, res) => {
+    //function to determine the category based on the productId range
+    function getCategoryFromId(productId) {
+        if (productId >= 1 && productId <= 12) {
+            return 'outerwear';
+        } else if (productId >= 13 && productId <= 24) {
+            return 'tops';
+        } else if (productId >= 25 && productId <= 36) {
+            return 'bottoms';
+        }
+        //handle else
+        return null;
+    }
+
+//individual product routes from home, category and product pages using productId
+app.get(['/item/:id', '/product/:id'], (req, res) => {
     const productId = req.params.id;
 
-    //find the product with the matching ID in your productData
-    const selectedProduct = productData.products.find(item => item.id === parseInt(productId, 10));
+    //find the product with matching id in productData
+    const selectedProduct = productData.products.find(item => item.id === parseInt(productId, 10)); //parseInt converts productId to int (base 10)
 
     if (!selectedProduct) {
-        //handle case where product is not found
+        //if product is not found
         res.status(404).send('Product not found');
         return;
     }
 
-    //determine the category based on the productId range
-    let category;
-    if (productId >= 1 && productId <= 12) {
-        category = 'outerwear';
-    } else if (productId >= 13 && productId <= 24) {
-        category = 'tops';
-    } else if (productId >= 25 && productId <= 36) {
-        category = 'bottoms';
-    } else {
-        //handle unknown category or invalid product ID range
-        res.status(404).send('Invalid product ID range');
-        return;
-    }
-
+    const category = getCategoryFromId(productId);
+    //take all category products from productData and store in categoryData
+    const categoryData = productData.products.filter(product => getCategoryFromId(product.id) === category);
     //choose four other products from the same category
-    const otherProducts = chooseProductsByCategory(productData.products, category, 4, productId);
+    const otherProducts = chooseRandomProducts(categoryData, 4);
 
-    //render view with the selected product and other products
-    res.render('itemdetails-page', {
-        product: selectedProduct,
-        otherProducts,
-        productData
-    });
-});
-
-//redirect route for individual products
-app.get('/product/:id', (req, res) => {
-    const productId = req.params.id;
-    //redirect to the '/item/:id' route to ensure consistent handling of otherProducts
-    res.redirect(`/item/${productId}`);
-});
-
-//function to shuffle array
-function shuffleArray(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        //swap array[i] and array[j]
-        [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-}
-
-//function to choose products from the same category
-function chooseProductsByCategory(allProducts, category, numProducts, excludeProductId) {
-    const productsInCategory = allProducts.filter(product => {
-        return product.id !== excludeProductId && getCategoryFromId(product.id) === category;
-    });
-
-    //shuffle the products and select the first four
-    const shuffledProducts = shuffleArray(productsInCategory);
-    return shuffledProducts.slice(0, numProducts);
-}
-
-//function to determine the category based on the productId range
-function getCategoryFromId(productId) {
-    if (productId >= 1 && productId <= 12) {
-        return 'outerwear';
-    } else if (productId >= 13 && productId <= 24) {
-        return 'tops';
-    } else if (productId >= 25 && productId <= 36) {
-        return 'bottoms';
-    }
-    //handle unknown category or invalid productId range
-    return null;
-}
-
-//define routes for products
-productData.products.forEach(product => {
-    app.get(`/product/${product.id}`, (req, res) => {
-      //render the item detail page with the specific item data
-      res.render('itemdetails-page', { product, productData });
-    });
+    //render view with the selected product and other products in category
+    res.render('itemdetails-page', { product: selectedProduct, otherProducts, productData });
 });
 
 //route for Tops page
@@ -167,51 +125,50 @@ app.get('/about',(req,res)=>{
     res.render('about-page',{ data })
 })
 
-//route for Thank You page
-app.get('/thankyou',(req,res)=>{
-    var data = require('./data/info.json')
-    res.render('thankyou-page',{ data })
-})
-
-//function to add products to cart
-function addToCart(productId) {
-    const product = productData.products.find(item => item.id === parseInt(productId, 10));
-
-    if (product) {
-        cart.push(product);
-        return true;
-    }
-
-    return false;
-}
-
 //redirects back to product page after adding to cart
 app.post('/addToCart/:id', (req, res) => {
+    //get id from req params
     const productId = req.params.id;
 
+    //try to add item to cart, if successful, redirect back to item page
     if (addToCart(productId)) {
         res.redirect(`/item/${productId}`);
-    } else {
+    } else { //if product wasn't found, throw 404
         res.status(404).send('Product not found');
     }
 });
 
+    //helper function to add products to cart
+    function addToCart(productId) {
+        //find and store product from productId param
+        const product = productData.products.find(item => item.id === parseInt(productId, 10)); //again, parseInt converts productId to int
+
+        //if product is found add product to cart array and return true
+        if (product) {
+            cart.push(product);
+            cartPrice += parseInt(product.price.replace('$', ''), 10);
+            return true;
+        }
+        //handle else
+        return false;
+    }
+
 //route to display cart page
 app.get('/cart', (req, res) => {
-    res.render('cart-page', { cart });
+    res.render('cart-page', { cart, cartPrice });
 });
 
-//route to handle checkout
+//post route to handle form submission
 app.post('/checkout', (req, res) => {
-    const { name, address, email, phone } = req.body;
+    const { name, address, email, phone } = req.body; //req.body stores form data
 
-    //create order object
+    //create order object using form data
     const order = {
         name,
         address,
         email,
         phone,
-        items: cart.slice(),
+        items: cart.slice(), //save copy of cart to items
     };
 
     //clear cart after checkout
@@ -224,21 +181,27 @@ app.post('/checkout', (req, res) => {
     res.redirect('/thankyou');
 });
 
-//function to save order data to orders.json
-function saveOrder(order) {
-    try {
-        //read existing orders from orders.json
-        const existingOrders = JSON.parse(fs.readFileSync('./data/orders.json', 'utf-8'));
+    //helper function to save order data to orders.json
+    function saveOrder(order) {
+        try {
+            //read existing orders from orders.json
+            const existingOrders = JSON.parse(fs.readFileSync('./data/orders.json', 'utf-8'));
 
-        //add new order to existing orders
-        existingOrders.push(order);
+            //add new order to existing orders
+            existingOrders.push(order);
 
-        //write the updated orders back to orders.json
-        fs.writeFileSync('./data/orders.json', JSON.stringify(existingOrders, null, 2), 'utf-8');
-    } catch (error) {
-        console.error('Error saving order:', error.message);
+            //write the updated orders back to orders.json
+            fs.writeFileSync('./data/orders.json', JSON.stringify(existingOrders, null, 2), 'utf-8');
+        } catch (error) { //catch just to be safe
+            console.error('Error saving order:', error.message);
+        }
     }
-}
+
+//route for Thank You page
+app.get('/thankyou',(req,res)=>{
+    var data = require('./data/info.json')
+    res.render('thankyou-page',{ data })
+})
 
 //error handling ->  app.use() basic express route 
 app.use((req,res) => {
@@ -256,7 +219,6 @@ app.use((error,req,res,next) => {
 //setup listener
 app.listen(port,()=>{
     console.log(`Server started http://localhost:${port}`)
-    //console.log('Server starter http://localhost:'+port)
     console.log('To close press Ctrl-C')
 })
 
