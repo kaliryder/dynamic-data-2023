@@ -61,5 +61,138 @@
         "price": "$30"
       }
     ]
+  },
+  {
+    "name": "Kali",
+    "address": "123 Periwinkle Ave",
+    "email": "k@gmail.com",
+    "phone": "2038027230",
+    "items": [
+      {
+        "id": 5,
+        "category": "Outerwear",
+        "title": "Brown Hoodie",
+        "image": "/img/outerwear/o-5-a.jpg",
+        "images": [
+          "/img/outerwear/o-5-a.jpg",
+          "/img/outerwear/o-5-b.jpg",
+          "/img/outerwear/o-5-c.jpg",
+          "/img/outerwear/o-5-d.jpg"
+        ],
+        "price": "$30"
+      },
+      {
+        "id": 26,
+        "category": "Bottoms",
+        "title": "Blue Jeans",
+        "image": "/img/bottoms/b-2-a.jpg",
+        "images": [
+          "/img/bottoms/b-2-a.jpg",
+          "/img/bottoms/b-2-b.jpg",
+          "/img/bottoms/b-2-c.jpg",
+          "/img/bottoms/b-2-d.jpg"
+        ],
+        "price": "$40"
+      },
+      {
+        "id": 15,
+        "category": "Tops",
+        "title": "Blue Patchwork Tank Top",
+        "image": "/img/tops/t-3-a.jpg",
+        "images": [
+          "/img/tops/t-3-a.jpg",
+          "/img/tops/t-3-b.jpg",
+          "/img/tops/t-3-c.jpg",
+          "/img/tops/t-3-d.jpg"
+        ],
+        "price": "$30"
+      }
+    ]
+  },
+  {
+    "name": "Kali Ryder",
+    "address": "123 Road Rd",
+    "email": "email@email.com",
+    "phone": "123-456-7890",
+    "items": [
+      {
+        "id": 13,
+        "category": "Tops",
+        "title": "Patchwork Collared Shirt",
+        "image": "/img/tops/t-1-a.jpg",
+        "images": [
+          "/img/tops/t-1-a.jpg",
+          "/img/tops/t-1-b.jpg",
+          "/img/tops/t-1-c.jpg",
+          "/img/tops/t-1-d.jpg"
+        ],
+        "price": "$50"
+      },
+      {
+        "id": 30,
+        "category": "Bottoms",
+        "title": "Plaid Pants",
+        "image": "/img/bottoms/b-6-a.jpg",
+        "images": [
+          "/img/bottoms/b-6-a.jpg",
+          "/img/bottoms/b-6-b.jpg",
+          "/img/bottoms/b-6-c.jpg",
+          "/img/bottoms/b-6-d.jpg"
+        ],
+        "price": "$40"
+      },
+      {
+        "id": 4,
+        "category": "Outerwear",
+        "title": "Multicolored Zip-Up Sweatshirt",
+        "image": "/img/outerwear/o-4-a.jpg",
+        "images": [
+          "/img/outerwear/o-4-a.jpg",
+          "/img/outerwear/o-4-b.jpg",
+          "/img/outerwear/o-4-c.jpg",
+          "/img/outerwear/o-4-d.jpg"
+        ],
+        "price": "$50"
+      },
+      {
+        "id": 15,
+        "category": "Tops",
+        "title": "Blue Patchwork Tank Top",
+        "image": "/img/tops/t-3-a.jpg",
+        "images": [
+          "/img/tops/t-3-a.jpg",
+          "/img/tops/t-3-b.jpg",
+          "/img/tops/t-3-c.jpg",
+          "/img/tops/t-3-d.jpg"
+        ],
+        "price": "$30"
+      },
+      {
+        "id": 27,
+        "category": "Bottoms",
+        "title": "Brown Velour Sweatpants",
+        "image": "/img/bottoms/b-3-a.jpg",
+        "images": [
+          "/img/bottoms/b-3-a.jpg",
+          "/img/bottoms/b-3-b.jpg",
+          "/img/bottoms/b-3-c.jpg",
+          "/img/bottoms/b-3-d.jpg"
+        ],
+        "price": "$40"
+      },
+      {
+        "id": 36,
+        "category": "Bottoms",
+        "title": "Blue Shorts",
+        "image": "/img/bottoms/b-12-a.jpg",
+        "images": [
+          "/img/bottoms/b-12-a.jpg",
+          "/img/bottoms/b-12-b.jpg",
+          "/img/bottoms/b-12-c.jpg",
+          "/img/bottoms/b-12-d.jpg"
+        ],
+        "price": "$30"
+      }
+    ]
   }
 ]

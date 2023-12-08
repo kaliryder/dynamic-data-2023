@@ -12,8 +12,7 @@ exports.newsletterSignupList = (req,res) => {
 }
 
 exports.newsletterUser = (req,res) => {
-     //eList = require('../data/emails.json')
-     console.log(eList)
+    console.log(eList)
     var userDetails = eList.users.filter((user)=>{ 
         return user.email == req.params.email
      })
